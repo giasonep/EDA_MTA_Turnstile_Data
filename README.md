@@ -1,2 +1,2 @@
-# EDA_MTA_Turnstile_Data
+# EDA of MTA Turnstile Data
 Metis Module 1 Project
