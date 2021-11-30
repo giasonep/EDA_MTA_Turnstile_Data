@@ -48,4 +48,4 @@ After munging the data, I wanted to provide WTWY with three recommended stations
 
 
 ### Future Work
-For future work and with respect to commuter changes in travel due to concers over COVID-19, analysis of current trends in ridership of busses versus subway trains could be used in tandem with geolocation to determine if double exposure could be gained by placing *Street Teams* at stations within a short distance of a bus stop.
+For future work and with respect to commuter changes in travel due to COVID-19, analysis of current trends in ridership of busses versus subway trains could be used in tandem with geolocation to determine if double exposure could be gained by placing *Street Teams* at stations within a short distance of a bus stop.
