@@ -16,7 +16,7 @@ WTWY was in search of the best NYC subway stations to place its *Street Team* to
 
 ### DATA CLEANING
 
-*All data was cleaned using the Pandas data analysis software library*
+*All data was cleaned using Pandas data analysis software library*
 
 - Several data entries for turnstile entries and exits decreased over time or had gaps of missing data; I removed these points from the data, resulting in a .9% reduction of the data set.
 
