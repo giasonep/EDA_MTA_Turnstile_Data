@@ -26,18 +26,54 @@ WTWY was in search of the best NYC subway stations to place its *Street Team* to
 
 - I combined total change in entries and exits to create a total passage count of each turnstile to create the most comprehensive picture of overall station traffic.
 
-- I manually altered station geographical data to correctly match the station names and line names of the MTA Turnstile data so that we could correctly output station positions on a map.
+- I manually altered station geographical data to correctly match the station names and line names of the MTA Turnstile data so that I could correctly output station positions on a map.
 
-- Geographical proximity for colleges within range of an MTA station was set to a haversine distance of half a mile or less.
+- I used the haversine formula to calculate the distance of colleges to an MTA station. I then analyzed stations within a half a mile to a college. 
 
 ### ASSUMPTIONS/BIAS IN THE DATA
 
 - *Environment*: COVID 19 has drastically changed the way people commute. To gain the most current snapshot of commuter trends, I *only* used the most recent three months of MTA Turnstile data to conduct this analysis.
 
-- *Data*: I removed days with missing or incorrect data rather than filled. This action resulted in an additional 1.5% reduction of the data set.
+- *Data*: I removed days for stations with missing or incorrect data rather than filling them. This action resulted in an additional 1.5% reduction of the data set.
 
 # RESULTS & CONCLUSION
-After munging the data, I wanted to provide WTWY with three recommended stations. My main points of focus were distance from the nearest universities’ STEM departments, total flow of traffic, time of day, day, and borough diversity. On average the weekdays outpaced the weekends two to one in total traffic, so I decided to only concentrate on weekdays. Furthermore, the busiest times of day were the 7 to 10 PM time bin, the 9 AM to 4 PM time bin and the 4 to 7 PM time bin. Overall, the busiest borough was Manhattan, with 34 St-Herald Sq., Grand Central-42 St. and 14 St.-Union Sq. being its busiest stations. The **14 St.-Union Sq. station**, within .4 miles of Baruch college, became my top recommended station for the weekdays of Tuesday-Friday from 9 AM to 4 PM. On those days and within that period, this station saw on average twenty-five thousand total passages. My second recommended station was the **W 4 St.-Washington Sq. station**, which is within .35 miles of NYU, for the weekdays of Wednesday-Friday from 7 to 10 PM. On those days and within that period, this station saw on average ten thousand total passages. Lastly, and in order to capture borough diversity, I recommended the **Flatbush AV-B.C. station**, which is .35 miles from Brooklyn College, on Mondays from 9 AM to 4 PM. On this day and within that period, this station saw on average six thousand total passages. Here is the following weekly schedule I recommended to WTWY:
+After munging the data, I recommended WTWY with specific days, times, and stations to target. My main points of focus were the distance from the nearest universities’ STEM departments, the total flow of traffic, time of day, day, and borough diversity. On average the weekdays outpaced the weekends in total traffic, so I decided to only concentrate on weekdays. Furthermore, the busiest times of day were the 9 AM to 4 PM time bin, the 4 to 7 PM time bin, and the 7 to 10 PM time bin. Overall, the busiest borough was Manhattan, with 34 St-Herald Sq., Grand Central-42 St. and 14 St.-Union Sq. being its busiest stations. 
+
+### Station Selection
+
+Busiest average stations and times for Baruch College:
+
+| Station | College | Distance | Day | Time Bin | Avg Passage |
+| :--- | :----: | :----:  |  :----:   |  :----:  |  ---:  |
+| 14 ST-UNION SQ | Baruch | .4 miles | Wed | 9 AM-4 PM | 26.3k |
+| 14 ST-UNION SQ | Baruch | .4 miles | Tue | 9 AM-4 PM | 25.1k |
+| 14 ST-UNION SQ | Baruch | .4 miles | Thu | 9 AM-4 PM | 24.6k |
+| 14 ST-UNION SQ | Baruch | .4 miles | Fri | 9 AM-4 PM | 24.3k |
+| 14 ST-UNION SQ | Baruch | .4 miles | Fri | 4-7 PM | 22.2k |
+
+Busiest average station and times for NYU:
+
+| Station | College | Distance | Day | Time Bin | Avg Passage |
+| :--- | :----: | :----:  |  :----:   |  :----:  |  ---:  |
+| W 4 ST-WASH SQ | NYU | .35 miles | Fri | 7-10 PM | 11k |
+| W 4 ST-WASH SQ | NYU | .35 miles | Thu | 7-10 PM | 10k |
+| W 4 ST-WASH SQ | NYU | .35 miles | Wed | 7-10 PM | 9.7k |
+| W 4 ST-WASH SQ | NYU | .35 miles | Wed | 9 AM-4 PM | 9.7k |
+| W 4 ST-WASH SQ | NYU | .35 miles | Thu | 9 AM-4 PM | 9.6k |
+
+Busiest average station and times for Brooklyn College:
+
+| Station | College | Distance | Day | Time Bin | Avg Passage |
+| :--- | :----: | :----:  |  :----:   |  :----:  |  ---:  |
+| FLATBUSH AV-B.C | Brooklyn College | .35 miles | Wed | 9 AM-4 PM | 6.5k |
+| FLATBUSH AV-B.C | Brooklyn College | .35 miles | Tue | 9 AM-4 PM | 6.4k |
+| FLATBUSH AV-B.C | Brooklyn College | .35 miles | Fri | 9 AM-4 PM | 6k |
+| FLATBUSH AV-B.C | Brooklyn College | .35 miles | Thu | 9 AM-4 PM | 5.9k |
+| FLATBUSH AV-B.C | Brooklyn College | .35 miles | Mon | 9 AM-4 PM | 5.7k |
+
+The **14 St.-Union Sq. station**, within .4 miles of Baruch college, became my top recommended station for the weekdays of Tuesday-Friday from 9 AM to 4 PM. On those days and within that period, this station saw on average twenty-five thousand total passages. My second recommended station was the **W 4 St.-Washington Sq. station**, which is within .35 miles of NYU, for the weekdays of Wednesday-Friday from 7 to 10 PM. On those days and within that period, this station saw on average ten thousand total passages. Lastly, and in order to capture borough diversity, I recommended the **Flatbush AV-B.C. station**, which is .35 miles from Brooklyn College, on Mondays from 9 AM to 4 PM. On this day and within that period, this station saw on average six thousand total passages. 
+
+In table format, this is the following weekly schedule I recommended to WTWY:
 
 | TIME | Monday | Tuesday | Wednesday | Thursday | Friday |
 | :--- | :----: | :----:  |  :----:   |  :----:  |  ---:  |
@@ -45,7 +81,5 @@ After munging the data, I wanted to provide WTWY with three recommended stations
 | 4 PM to 7 PM | - | - | *break* | *break* | *break* |
 | 7 PM to 10 PM | - | - | W 4 St.-Washington Sq. | W 4 St.-Washington Sq. | W 4 St.-Washington Sq. |
 
-
-
 ### Future Work
-For future work and with respect to commuter changes in travel due to COVID-19, analysis of current trends in ridership of busses versus subway trains could be used in tandem with geolocation to determine if double exposure could be gained by placing *Street Teams* at stations within a short distance of a bus stop.
+For future work and with respect to commuter changes in travel due to COVID-19, I would like to analyze current trends in ridership of busses versus subway trains. Double exposure to trains and subway stations could be advantageous for *Street Teams* if they station within a short distance of a bus stop and subway entrance. Additionally, I would want feedback from WTWY based on the above recommendations and provide supplementary days, times and locations if desired by them.
