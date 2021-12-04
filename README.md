@@ -10,6 +10,7 @@ The goal of this module was to use the most recent three months of MTA Turnstile
   - NumPy
   - Pandas
   - Plotly
+  - GeoPandas
 
 ### Data
   - MTA Data (http://web.mta.info/developers/turnstile.html)
